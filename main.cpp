@@ -1,23 +1,7 @@
 #include <iostream>
+#include "Calculator.h"
+#include "Calculator.cpp"
 using namespace std;
-class Calculator
-{
-  private:
-    /* data */
-  public:
-    Calculator(/* args */);
-    ~Calculator();
-};
-
-Calculator::Calculator(/* args */)
-{
-    cout << "Creating calculator" << endl;
-}
-
-Calculator::~Calculator()
-{
-    cout << "Destructing calculator" << endl;
-}
 
 int main()
 {
