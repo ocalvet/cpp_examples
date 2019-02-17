@@ -7,8 +7,8 @@
           "command": "clang++",
           "args": [
               "-o",
-              "main", // executable
-              "main.cpp", // main file
+              "${fileBasenameNoExtension}", // executable
+              "${file}", // main file
               "-g",
               "-v"
           ],
