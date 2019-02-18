@@ -4,9 +4,8 @@ template <class T>
 class Node
 {
   private:
-    T data;
-
   public:
+    T data;
     Node<T> *next;
     Node<T> *prev;
     Node(T);
@@ -16,11 +15,11 @@ template <class T>
 class List
 {
   private:
-    Node *head;
+    Node<T> *head, *tail;
 
   public:
-    List();
-    ~List();
+    List<T>();
+    ~List<T>();
     void add(T value);
     void remove(T value);
     void print();
