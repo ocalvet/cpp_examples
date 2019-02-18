@@ -30,11 +30,30 @@ void List<T>::add(T val)
     this->tail = node;
 }
 
-template<class T>
-void List<T>::print() 
+template <class T>
+void List<T>::remove(T val)
 {
     Node<T> *node = this->head;
-    while(node != NULL)
+    while (node != NULL)
+    {
+        if (node->data == val)
+        {
+            if (node->prev != NULL && node->next != NULL)
+            {
+                node->prev->next = node->next;
+                node->next->prev = node->prev;
+            }
+            return;
+        }
+        node = node->next;
+    }
+}
+
+template <class T>
+void List<T>::print()
+{
+    Node<T> *node = this->head;
+    while (node != NULL)
     {
         cout << node->data << endl;
         node = node->next;
